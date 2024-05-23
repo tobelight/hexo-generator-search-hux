@@ -9,6 +9,11 @@
       {% else %}
         <title>No Title</title>
       {% endif %}
+      {% if post.subtitle %}
+        <subtitle>{{ post.subtitle }}</subtitle>
+      {% else %}
+        <subtitle>No Subtitle</subtitle>
+      {% endif %}
       <link href="{{ (url + post.path) | uriencode }}"/>
       <url>{{ (url + post.path) | uriencode }}</url>
       {% if content %}
